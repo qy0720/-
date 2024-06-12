@@ -1,0 +1,5 @@
+data_dict = json.loads(response.text) 
+
+path = os.path.join('/mnt/bn/qy-dcar-valume/IMG_JSON', basename + '.json')
+with open(path, 'w', encoding='utf-8') as f:  
+  json.dump(data_dict, f, ensure_ascii=False, indent=4)
